@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- namespace : 对应实现的接口 全限定类名 -->
+<mapper namespace="com.buba.monthtest.dao.WeatherMapper">
+   <!-- boolean addWeather(Weather weather1);-->
+    <insert id="addWeather">
+        insert into bj_weather values (null,now(),#{temperature},#{humidity},#{info},#{wid},#{direct},#{power},#{aqi})
+    </insert>
+</mapper>
