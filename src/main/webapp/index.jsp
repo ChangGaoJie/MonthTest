@@ -63,6 +63,7 @@
         var form = layui.form;
 
         //自定义验证规则
+        //检测
         form.verify({
             pass: [/(.+){6,12}$/, '密码必须6到12位']
             ,repass:function(value){
