@@ -69,9 +69,9 @@ import static com.buba.monthtest.util.JSONUtils.json2Object;
                 fin = new FileInputStream(file);
                 //获取通道
                 FileChannel channel = fin.getChannel();
-
+                //分配指定大小的缓冲区
                 ByteBuffer bf = ByteBuffer.allocate(1024);
-
+                //读取本地文件，并发送到客户端
                 int bytesRead = channel.read(bf);
                 while (bytesRead != -1) {
                     bf.flip();
