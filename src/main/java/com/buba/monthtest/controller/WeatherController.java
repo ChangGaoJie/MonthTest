@@ -57,8 +57,12 @@ import static com.buba.monthtest.util.JSONUtils.json2Object;
             Calendar c = Calendar.getInstance();//可以对每个时间域单独修改
             int hour = c.get(Calendar.HOUR_OF_DAY);
             int minute = c.get(Calendar.MINUTE);
-
-            String name = hour + "" + minute + ".txt";
+            String name=null;
+            if(minute==0){
+                name = hour + "" + minute + "0.txt";
+            }else{
+                name = hour + "" + minute + ".txt";
+            }
             boolean b = false;
             //File file = new File("D:\\kaoshi\\bj\\2019-12-04\\0845.txt");
             File file = new File("D:\\kaoshi\\bj\\"+dirName+"\\"+name);
